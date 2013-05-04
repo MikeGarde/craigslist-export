@@ -1,7 +1,12 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
+$cle_elements['required'] = array(
+	'title',
+	'description',
+	'cl:category',
+	'cl:area',
+	'cl:replyEmail',
+	'cl:replyEmail',
+);
+$cle_elements['optional'] = array();
+$cle_elements['maps'] = array();
