@@ -1,0 +1,10 @@
+#craigslist-save-settings {}
+#craigslist-save-settings label {
+	display: block;
+}
+#craigslist-save-settings input[type="text"] {
+	width: 240px;
+	margin: 0 0 20px 0;
+}
+#craigslist-save-settings {}
+#craigslist-save-settings {}
