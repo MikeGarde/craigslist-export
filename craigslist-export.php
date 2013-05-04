@@ -19,7 +19,7 @@ class craigslist_export_settings {
 		add_option('cle_username', '');
 		add_option('cle_password', '');
 		add_option('cle_accountID', '');
-		add_option('cle_post_type', '');
+		add_option('cle_post_type', 'post');
 		add_option('cle_associations', 'a:0:{}');
 	}
 	function admin_menu() {
@@ -45,6 +45,14 @@ class craigslist_export_settings {
 			$select_post_type[$key] = $value->labels->name;
 		}
 		unset($post_types);
+		$args=array(
+			'post_type' => $cle['post_type'],
+			'post_status' => 'publish',
+			'posts_per_page' => 1);
+
+		$active_post_type = query_posts($args);
+		$active_post_type = $active_post_type[0];
+		$active_post_type->meta = get_post_meta($active_post_type->ID);
 
 		require_once('view/settings.php');
 	}

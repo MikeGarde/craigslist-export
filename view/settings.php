@@ -64,3 +64,5 @@ function ajaxSubmit(){
 
 jQuery('#craigslist-save-settings').submit(ajaxSubmit);
 </script>
+
+<?php print_a($active_post_type); ?>
